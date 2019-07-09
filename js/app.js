@@ -1,3 +1,4 @@
+// Generic class for all game pieces
 class Sprite {
     constructor(x, y, speed) {
         this.x = x;
@@ -5,7 +6,8 @@ class Sprite {
         this.speed = speed
         this.sprite = "";
     }
-
+    
+    // Method to render/ create image on canvas
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
@@ -19,6 +21,9 @@ class Enemy extends Sprite {
         this.sprite = 'images/enemy-bug.png';
     }
 
+    // Update enemy locations based on time passed
+    // Check if player and enemy collide, reset player position is collision happens
+    // Input: dt: time passed between updates
     update(dt) {
         this.x += dt * this.speed;
         if (this.x > 580) {
@@ -37,8 +42,6 @@ class Enemy extends Sprite {
 }
 
 // Now write your own player class
-// This class requires an update(), render() and
-// a handleInput() method.
 class Player extends Sprite {
     constructor(x, y, speed) {
         super(x, y, speed)
@@ -47,16 +50,19 @@ class Player extends Sprite {
 
     update() {}
 
+    // Reset player position to starting point on canvas
     reset() {
         this.x = 202;
         this.y = 380;
     }
 
+    // Respond to user inputs, move player accordingly
+    // If player reaches opposite side, reset game
     handleInput(direction) {
         if (direction == 'up' && this.y > 0) {
             this.y -= 83
             if (this.y < 0) {
-                player.reset()
+                player.reset
             }
         }
         else if (direction == 'down' && this.y < 380) {
