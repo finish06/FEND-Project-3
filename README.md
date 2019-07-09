@@ -2,8 +2,8 @@
 
 ## Table of Contents
 
-- [Game_Setup](#Game Setup)
-- [Game_Mechanics](#Game Mechanics)
+- [Game Setup](#Game_Setup)
+- [Game Mechanics](#Game_Mechanics)
 
 ## Game Setup
 
