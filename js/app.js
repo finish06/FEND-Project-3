@@ -63,7 +63,7 @@ class Player extends Sprite {
         if (direction == 'up' && this.y > 0) {
             this.y -= 83
             if (this.y < 0) {
-                this.reset
+                this.reset()
             }
         }
         else if (direction == 'down' && this.y < 380) {
