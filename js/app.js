@@ -1,3 +1,4 @@
+"use strict"
 // Generic class for all game pieces
 class Sprite {
     constructor(x, y, speed) {
@@ -32,10 +33,10 @@ class Enemy extends Sprite {
             this.speed += 25
             }
         }
-        if (player.x < this.x + 50 &&
+        if (player.x < this.x + 65 &&
             player.x + 25 > this.x &&
             player.y < this.y + 25 &&
-            player.y + 50 > this.y) {
+            player.y + 65 > this.y) {
                 player.reset()
         }
     }
@@ -62,7 +63,7 @@ class Player extends Sprite {
         if (direction == 'up' && this.y > 0) {
             this.y -= 83
             if (this.y < 0) {
-                player.reset
+                this.reset
             }
         }
         else if (direction == 'down' && this.y < 380) {
