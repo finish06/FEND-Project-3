@@ -2,19 +2,15 @@
 
 ## Table of Contents
 
-- [Instructions](#instructions)
-- [Contributing](#contributing)
+- [Game_Setup](#Game Setup)
+- [Game_Mechanics](#Game Mechanics)
 
-## Instructions
+## Game Setup
 
-Use this [rubric](https://review.udacity.com/#!/rubrics/15/view) for self-checking your submission.
+1. Clone repository or download zip file
+2. Open `index.html`
+3. Have a blast playing the game
 
-Make sure the functions you write are **object-oriented** - either class functions (like `Player` and `Enemy`) or class prototype functions such as `Enemy.prototype.checkCollisions`. Also make sure that the keyword `this` is used appropriately within your class and class prototype functions to refer to the object the function is called upon.
+## Game Mechanics
 
-Your **README.md** file should be updated with instructions on both how to 1. Run and 2. Play your arcade game.
-
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
-
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+The objective is to successfully move the player through the grass and stones to the opposite side of the map, i.e. the water. Player movement is accomplished by the keyboard arrow keys. The player can move up, down, left and right within the boundaries of the screen. Upon reaching the water, the player will be reset to his original location for another round of fun!
